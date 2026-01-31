@@ -118,10 +118,11 @@ export default function Page() {
     <div className="p-10">
       <div className="space-y-8">
         {/* PROFILE SECTION */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 font-semibold">
+          
           {/* Profile Card */}
-          <div className="col-span-1 p-6 border border-gray-300 rounded-xl flex items-center gap-4">
-            <img
+          <div className="col-span-1 p-6 border border-gray-300 rounded-xl flex items-center gap-4 ">
+          <img
               src={profilePictureUrl || "/avatar-placeholder.png"}
               alt="profile"
               className="w-20 h-20 rounded-full object-cover"
@@ -129,13 +130,15 @@ export default function Page() {
 
             <div>
               <p className="text-lg font-semibold">{name}</p>
-              <p className="text-sm  bg-linear-to-l from-indigo-500 via-red-500 to-blue-500 text-transparent bg-clip-text">@{username}</p>
+              <p className="text-sm  bg-linear-to-l from-indigo-500 via-pink-500 to-blue-500 text-transparent bg-clip-text">@{username}</p>
               <p className="text-xs text-gray-400 mt-1">{accountType}</p>
             </div>
           </div>
 
           {/* Stats */}
-          <div className="col-span-1 md:col-span-2 grid grid-cols-3 gap-4">
+          <div className="col-span-1 md:col-span-2 grid grid-cols-3 gap-4 ">
+         
+            
             <StatCard label="Followers" value={followersCount} />
             <StatCard label="Following" value={followsCount} />
             <StatCard label="Media" value={mediaCount} />
@@ -164,8 +167,9 @@ export default function Page() {
                 return (
                   <div
                     key={item.media_id}
-                    className={`p-4 border-2 ring-4 rounded-xl space-y-4 ${isActive ? " border-green-300 ring-green-100 bg-green-50" : " border-gray-300 ring-gray-100 bg-gray-50"}`}
+                    className={`p-4 border-2 ring-4 rounded-xl space-y-4   ${isActive ? " border-green-300 ring-green-100 bg-green-50" : " border-gray-300 ring-gray-100 bg-gray-50"}`}
                   >
+                       
 
                     {/* Header */}
                     {/* <div className="">

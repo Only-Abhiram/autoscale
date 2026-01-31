@@ -14,7 +14,7 @@ export default function Header({ children }) {
       <>
         <nav className="w-full h-14 px-6 flex items-center justify-between   backdrop-blur-xl fixed">
           {/* Left: Logo */}
-          <div className="text-2xl font-extrabold bg-linear-to-l from-indigo-500 via-red-500 to-blue-500 text-transparent bg-clip-text">
+          <div className="text-2xl font-extrabold bg-linear-to-r from-black via-gray-500 to-gray-300 text-transparent bg-clip-text">
             autoscale
           </div>
   

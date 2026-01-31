@@ -58,7 +58,7 @@ export default function Automate() {
         <button
           onClick={refreshPosts}
           disabled={loading}
-          className="px-4 py-2 rounded bg-indigo-600 text-white disabled:opacity-60 flex "
+          className="px-4 py-2 rounded bg-white-600 font-bold text-black border disabled:opacity-60 flex "
         >
           {refreshing ? <Loader/> : "Refresh"}
         </button>
