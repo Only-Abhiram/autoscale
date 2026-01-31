@@ -4,6 +4,7 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 import AutomationPopup from "@/lib/ui/components/automationPopup";
 import Notification from "@/lib/ui/components/notification";
+import Loader from "@/lib/ui/components/loader";
 import { useRouter } from "next/navigation";
 export default function Automate() {
   const router = useRouter();
@@ -59,9 +60,7 @@ export default function Automate() {
           disabled={loading}
           className="px-4 py-2 rounded bg-indigo-600 text-white disabled:opacity-60 flex "
         >
-          {refreshing ? (<svg className="size-5 animate-spin " viewBox="0 0 24 24">
-
-          </svg>) : "Refresh"}
+          {refreshing ? <Loader/> : "Refresh"}
         </button>
       </div>
 

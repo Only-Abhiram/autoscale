@@ -1,8 +1,10 @@
 "use client";
-
+import { useState } from "react";
 export default function Login() {
+  const [loading ,setLoading] = useState(false);
   const handleLogin = () => {
     // MUST be a navigation, not axios
+    setLoading(true);
     window.location.href = "/api/login";
   };
 
@@ -25,9 +27,14 @@ export default function Login() {
           onClick={handleLogin}
           className="w-full flex items-center justify-center gap-2  py-3 rounded-lg bg-black text-white font-semibold hover:opacity-90 transition"
         >
-          Continue with Instagram
-          <img className="h-7" src="https://img.icons8.com/?size=100&id=KDWXXYcBSEcJ&format=png&color=FFFFFF"></img>
-
+          {loading ? <Loader/>:(
+            <>
+            <h3>Continue with Instagram</h3> 
+            <img className="h-7" src="https://img.icons8.com/?size=100&id=KDWXXYcBSEcJ&format=png&color=FFFFFF"></img>
+            </>
+          )}
+          
+          
         </button>
 
         {/* Divider */}
@@ -50,4 +57,10 @@ bg-[size:10px_10px]
 
     </main>
   );
+} function Loader(){
+  return <div>
+  <img src="https://img.icons8.com/?size=100&id=113776&format=png&color=FFFFFF" className="mr-3 size-5 animate-spin " viewBox="0 0 24 24">
+
+  </img>
+  </div>
 }

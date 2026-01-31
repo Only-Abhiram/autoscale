@@ -11,7 +11,7 @@ export  async function POST(req){
         media_id: postId,
         instagram_account_id: instagramAccountId,
         media_url: mediaUrl,
-        status: "true",
+        status: true,
         reply_message: replyMessage,
         dm_message: dmMessage,
         permalink: permalink,

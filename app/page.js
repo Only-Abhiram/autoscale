@@ -2,11 +2,14 @@
 
 import { useRouter } from "next/navigation";
 import TextType from '@/lib/ui/typingtext/typetext';
+import { useState } from "react";
+import Loader from "@/lib/ui/components/loader";
 
 export default function Home() {
   const router = useRouter();
-
+  const [loading, setLoading] = useState(false);
   const handleClick = () => {
+    setLoading(true);
     router.push("/login");
   };
 
@@ -47,7 +50,7 @@ export default function Home() {
               onClick={handleClick}
               className="px-8 py-3 rounded-lg bg-white text-gray-900 font-semibold hover:bg-gray-100 transition"
             >
-              Get Started
+              {loading ? <Loader/>: "Get started"}
             </button>
 
             <a

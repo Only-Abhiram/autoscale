@@ -36,8 +36,10 @@ export async function POST(req) {
       const instagramAccountId = entry.id;
       if (instagramAccountId === commenter_id) continue; // avoid infinite looping
       //find if media_if exists ->get the reply and dm message , accesstoken
-      const { reply_message, dm_message} = await findAutomation(media_id);
-      if(!reply_message && !dm_message ) continue;
+      const { reply_message, dm_message, status} = await findAutomation(media_id);
+      if(status==false ) continue;
+
+      //respond to the event
       const userData = await getProfileDetails(instagramAccountId);
       const accessToken = userData.access_token; 
       
