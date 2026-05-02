@@ -1,36 +1,90 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
-## Getting Started
 
-First, run the development server:
+
+# Autoscale (Instagram Automation Platform)
+
+An automation system for professional Instagram accounts that enables auto-replies, automated DMs, and engagement workflows.
+## 🚀 Overview
+
+This project is built with **Next.js** and is designed to help businesses and creators automate Instagram interactions such as:
+
+- Auto-replying to comments
+- Sending automated Direct Messages (DMs)
+- Keyword-based engagement triggers
+
+---
+
+## 🎯 Target Users
+
+- Content Creators  
+- Influencers  
+- Coaches & Consultants  
+- E-commerce Brands  
+- Marketing Agencies  
+- Small Businesses  
+
+---
+
+
+## 🌐 Live:(Works only for private users, since app review is in progress)  
+https://autoscale-nine.vercel.app/
+
+
+## 🛠 Tech Stack
+
+- **Framework:** React.js + Next.js 
+- **Backend:** Next.js API Routes / Server Actions
+- **Integration:** Meta (Instagram) Graph API
+- **Authentication:** OAuth (Instagram Business Login)
+- **Database:** MongoDB 
+- **Deployment:** Vercel
+
+---
+
+## ⚙️ Features 
+
+### 1. Auto Comment Reply
+- Trigger replies based on keywords
+- Custom response templates
+- Public comment automation
+
+### 2. Auto DM Automation
+- Send DM when users comment specific keywords
+- Follow-based automated messages
+
+### 3. Workflow Engine
+- Conditional triggers (if comment contains X → send DM)
+- Delay-based automation
+
+### 4. Admin Dashboard
+- Manage triggers
+- View analytics
+- Manage message templates
+
+---
+
+## 🔐 Requirements
+
+- Instagram Professional (Business or Creator) account
+- Meta Developer App
+- Instagram Graph API access
+- Webhook setup for real-time events
+
+---
+
+## 🧪 Getting Started
+
+Install dependencies:
 
 ```bash
-npm run dev
+npm install
 # or
-yarn dev
+yarn install
 # or
-pnpm dev
-# or
-bun dev
+pnpm install
 ```
-
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Run development server:
+```bash
+npm run dev
+```
+Open: http://localhost:3000
